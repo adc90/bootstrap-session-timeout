@@ -160,7 +160,7 @@
             timer = setTimeout(function() {
                 // Check for onWarn callback function and if there is none, launch dialog
                 if (typeof opt.onWarn !== 'function') {
-                    $('#session-timeout-dialog').modal('show');
+                    $('#session-timeout-dialog').modal({ show: true, backdrop: 'static', keyboard: false });
                 } else {
                     opt.onWarn(opt);
                 }
